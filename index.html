@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RADHIKA GARMENTS — Men's Clothing</title>
+<style>
+:root{--black:#111;--cream:#f7f3ee;--muted:#6f6f6f;--line:#e7e3df;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--black);background:#fff}
+a{text-decoration:none;color:inherit}button,input,select{font:inherit}.top{background:#111;color:#fff;text-align:center;padding:8px;font-size:12px}
+nav{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5%;position:sticky;top:0;background:#fff;z-index:10}
+.logo{font-size:22px;font-weight:800;letter-spacing:.5px}.logo span{font-weight:400}
+.navlinks{display:flex;gap:28px;font-size:13px}.icons{display:flex;gap:18px;font-size:20px}.cartbtn{border:0;background:none;cursor:pointer;position:relative}.badge{position:absolute;right:-7px;top:-8px;background:#111;color:#fff;border-radius:50%;font-size:10px;padding:3px 6px}
+.hero{min-height:520px;background:linear-gradient(90deg,#eee6dc 0%,#eee6dc 50%,#d9d1c7 100%);display:flex;align-items:center;padding:50px 7%;overflow:hidden}
+.hero-text{width:48%}.eyebrow{font-size:13px;letter-spacing:2px}.hero h1{font-size:62px;line-height:.98;margin:15px 0}.hero p{font-size:17px;color:#555;max-width:450px}.btn{background:#111;color:#fff;border:0;padding:15px 25px;cursor:pointer;font-weight:700}.hero-img{width:52%;height:430px;background:url('https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1000&q=85') center/cover;border-radius:3px}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}.feature{background:#fff;padding:22px;text-align:center;font-size:13px}.feature strong{display:block;margin-bottom:6px}
+section{padding:55px 5%}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.section-head h2{font-size:28px;margin:0}.muted{color:var(--muted);font-size:13px}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.cat{height:340px;position:relative;background-size:cover;background-position:center;display:flex;align-items:end;padding:25px;color:#fff}.cat:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.7))}.cat div{position:relative;z-index:1}.cat h3{font-size:28px;margin:0 0 10px}.cat button{background:#fff;border:0;padding:10px 16px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.product{position:relative}.pic{height:330px;background:#eee center/cover no-repeat;position:relative}.tag{position:absolute;top:12px;left:12px;background:#111;color:#fff;padding:6px 9px;font-size:10px;font-weight:700}.heart{position:absolute;right:12px;top:12px;background:#fff;border:0;border-radius:50%;width:34px;height:34px;cursor:pointer}.product h3{font-size:14px;margin:12px 0 6px}.price{font-weight:700}.old{text-decoration:line-through;color:#999;font-weight:400;margin-left:7px}.stars{font-size:12px;margin-top:6px;color:#777}
+.banner{background:#111;color:#fff;padding:45px;text-align:center}.banner h2{font-size:36px;margin:0 0 10px}.banner p{color:#ccc}.banner button{background:#fff;color:#111;border:0;padding:13px 22px;font-weight:700}
+footer{background:#111;color:#fff;padding:50px 5% 25px}.footergrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:35px}.footergrid h4{margin-top:0}.footergrid a{display:block;color:#bbb;font-size:13px;margin:10px 0}.copy{border-top:1px solid #333;margin-top:30px;padding-top:20px;color:#999;font-size:12px}
+.drawer{position:fixed;right:-440px;top:0;width:420px;max-width:100%;height:100%;background:#fff;z-index:30;box-shadow:-10px 0 40px #0002;transition:.3s;padding:25px;overflow:auto}.drawer.open{right:0}.overlay{position:fixed;inset:0;background:#0007;z-index:20;display:none}.overlay.show{display:block}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.close{background:none;border:0;font-size:24px;cursor:pointer}.cart-item{display:grid;grid-template-columns:75px 1fr auto;gap:12px;padding:18px 0;border-bottom:1px solid var(--line);align-items:center}.cart-item img{width:75px;height:90px;object-fit:cover}.qty{display:flex;gap:8px;align-items:center;margin-top:8px}.qty button{width:26px;height:26px;border:1px solid var(--line);background:#fff}.summary{margin-top:25px}.row{display:flex;justify-content:space-between;margin:12px 0}.total{font-size:20px;font-weight:800;border-top:1px solid var(--line);padding-top:16px}.full{width:100%;margin-top:15px}
+.checkout{display:none;position:fixed;inset:0;background:#fff;z-index:40;overflow:auto}.checkout.show{display:block}.checkout-inner{max-width:1050px;margin:auto;padding:30px 5%}.checkout-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:20px}.checkout-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:35px;margin-top:35px}.formbox,.orderbox{border:1px solid var(--line);padding:25px}.formbox h3,.orderbox h3{margin-top:0}.field{margin-bottom:15px}.field label{display:block;font-size:12px;font-weight:700;margin-bottom:7px}.field input,.field select{width:100%;padding:13px;border:1px solid #ccc}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.payment{border:1px solid #ccc;padding:14px;margin-top:10px}.success{display:none;text-align:center;padding:80px 20px}.success.show{display:block}.success .check{font-size:60px}.empty{text-align:center;padding:60px 10px;color:#777}
+@media(max-width:800px){.navlinks{display:none}.hero{display:block;padding:40px 5%}.hero-text,.hero-img{width:100%}.hero h1{font-size:45px}.hero-img{height:330px;margin-top:30px}.features{grid-template-columns:1fr 1fr}.categories{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.pic{height:260px}.footergrid{grid-template-columns:1fr 1fr}.checkout-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.features{grid-template-columns:1fr}.hero h1{font-size:38px}.drawer{width:100%}}
+</style>
+</head>
+<body>
+<div class="top">🔥 Flat 20% OFF on First Order | Use Code: NEW20</div>
+<nav>
+  <div class="logo">URBAN<span>VIBE</span></div>
+  <div class="navlinks"><a href="#home">HOME</a><a href="#categories">SHOP</a><a href="#new">NEW ARRIVALS</a><a href="#about">ABOUT US</a></div>
+  <div class="icons"><span>⌕</span><span>♡</span><button class="cartbtn" onclick="openCart()">🛒<span class="badge" id="badge">0</span></button></div>
+</nav>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-text"><div class="eyebrow">MEN'S NEW COLLECTION</div><h1>NEW SEASON.<br>YOUR STYLE.</h1><p>Premium shirts, T-shirts and jeans made for modern men.</p><button class="btn" onclick="document.getElementById('new').scrollIntoView({behavior:'smooth'})">SHOP NOW</button></div>
+  <div class="hero-img"></div>
+</section>
+
+<div class="features"><div class="feature"><strong>🚚 FREE SHIPPING</strong>On orders above ₹999</div><div class="feature"><strong>↩ EASY RETURNS</strong>Within 7 days</div><div class="feature"><strong>🔒 SECURE PAYMENT</strong>100% secure checkout</div><div class="feature"><strong>💵 CASH ON DELIVERY</strong>Available across India</div></div>
+
+<section id="categories">
+  <div class="section-head"><h2>SHOP BY CATEGORY</h2><span class="muted">Find your style</span></div>
+  <div class="categories">
+    <div class="cat" style="background-image:url('https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=85')"><div><h3>SHIRTS</h3><button onclick="filterProducts('Shirts')">SHOP NOW</button></div></div>
+    <div class="cat" style="background-image:url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85')"><div><h3>T-SHIRTS</h3><button onclick="filterProducts('T-Shirts')">SHOP NOW</button></div></div>
+    <div class="cat" style="background-image:url('https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=85')"><div><h3>JEANS</h3><button onclick="filterProducts('Jeans')">SHOP NOW</button></div></div>
+  </div>
+</section>
+
+<section id="new">
+  <div class="section-head"><div><h2>NEW ARRIVALS</h2><span class="muted">Fresh styles just landed</span></div><button class="btn" onclick="filterProducts('All')">VIEW ALL</button></div>
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<div class="banner"><h2>20% OFF SUMMER COLLECTION</h2><p>Use code <b>NEW20</b> at checkout.</p><button onclick="filterProducts('All')">SHOP COLLECTION</button></div>
+
+<section id="about"><div class="section-head"><h2>WHY RADHIKA GARMENTS?</h2></div><p class="muted" style="max-width:720px;line-height:1.8">A demo-ready men's fashion storefront designed for shirts, T-shirts and jeans. Replace the sample products, images, logo and contact details with your real business information before launch.</p></section>
+</main>
+
+<footer><div class="footergrid"><div><div class="logo">RADHIKA GARMENTS</div><p style="color:#bbb;line-height:1.7;font-size:13px">Modern men's fashion for everyday confidence.</p></div><div><h4>SHOP</h4><a href="#categories">Shirts</a><a href="#categories">T-Shirts</a><a href="#categories">Jeans</a><a href="#new">New Arrivals</a></div><div><h4>HELP</h4><a href="#">Track Order</a><a href="#">Returns</a><a href="#">Shipping</a><a href="#">Contact Us</a></div><div><h4>POLICIES</h4><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Refund Policy</a></div></div><div class="copy">© 2026 RADHIKA GARMENTS. Demo storefront.</div></footer>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer"><div class="drawer-head"><h2>Your Cart</h2><button class="close" onclick="closeCart()">×</button></div><div id="cartItems"></div><div class="summary" id="cartSummary"></div></aside>
+
+<div class="checkout" id="checkout">
+  <div class="checkout-inner">
+    <div class="checkout-head"><div class="logo">RADHIKA GARMENTS</div><button class="close" onclick="closeCheckout()">×</button></div>
+    <div id="checkoutContent">
+      <h1>Checkout</h1>
+      <div class="checkout-grid">
+        <div class="formbox">
+          <h3>Delivery Information</h3>
+          <div class="field"><label>FULL NAME</label><input id="name" placeholder="Your name"></div>
+          <div class="two"><div class="field"><label>PHONE</label><input id="phone" placeholder="10-digit mobile"></div><div class="field"><label>EMAIL</label><input id="email" placeholder="you@example.com"></div></div>
+          <div class="field"><label>ADDRESS</label><input id="address" placeholder="House no., street, area"></div>
+          <div class="two"><div class="field"><label>CITY</label><input id="city" placeholder="City"></div><div class="field"><label>PINCODE</label><input id="pin" placeholder="110001"></div></div>
+          <h3>Payment Method</h3>
+          <div class="payment"><label><input type="radio" name="pay" checked> UPI / Card / Net Banking</label></div>
+          <div class="payment"><label><input type="radio" name="pay"> Cash on Delivery</label></div>
+          <button class="btn full" onclick="placeOrder()">PLACE ORDER</button>
+        </div>
+        <div class="orderbox"><h3>Order Summary</h3><div id="orderSummary"></div></div>
+      </div>
+    </div>
+    <div class="success" id="success"><div class="check">✓</div><h1>Order Placed!</h1><p class="muted">Thank you for shopping with RADHIKA GARMENTS. Your demo order has been confirmed.</p><button class="btn" onclick="closeCheckout()">CONTINUE SHOPPING</button></div>
+  </div>
+</div>
+
+<script>
+const products=[
+ {id:1,name:"Premium Casual Shirt",cat:"Shirts",price:799,old:1199,img:"https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=700&q=85"},
+ {id:2,name:"Oversized T-Shirt",cat:"T-Shirts",price:599,old:799,img:"https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=85"},
+ {id:3,name:"Slim Fit Jeans",cat:"Jeans",price:999,old:1399,img:"https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=85"},
+ {id:4,name:"Printed Casual Shirt",cat:"Shirts",price:699,old:999,img:"https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=700&q=85"},
+ {id:5,name:"Regular Fit T-Shirt",cat:"T-Shirts",price:449,old:649,img:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"},
+ {id:6,name:"Relaxed Fit Jeans",cat:"Jeans",price:1099,old:1499,img:"https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=85"},
+ {id:7,name:"Linen Shirt",cat:"Shirts",price:899,old:1299,img:"https://images.unsplash.com/photo-1602810316498-ab67cf68c8e1?auto=format&fit=crop&w=700&q=85"},
+ {id:8,name:"Essential Black T-Shirt",cat:"T-Shirts",price:499,old:699,img:"https://images.unsplash.com/photo-1583743814966-8936f37f4e15?auto=format&fit=crop&w=700&q=85"}
+];
+let cart=JSON.parse(localStorage.getItem("radhikacart")||"[]");
+
+function renderProducts(list=products){
+ document.getElementById("productGrid").innerHTML=list.map(p=>`
+ <article class="product"><div class="pic" style="background-image:url('${p.img}')"><span class="tag">NEW</span><button class="heart">♡</button></div>
+ <h3>${p.name}</h3><div class="price">₹${p.price.toLocaleString('en-IN')} <span class="old">₹${p.old.toLocaleString('en-IN')}</span></div><div class="stars">★ 4.5 &nbsp; · &nbsp; ${p.cat}</div>
+ <button class="btn full" onclick="addToCart(${p.id})">ADD TO CART</button></article>`).join("");
+}
+function filterProducts(cat){renderProducts(cat==="All"?products:products.filter(p=>p.cat===cat));document.getElementById("new").scrollIntoView({behavior:"smooth"});}
+function addToCart(id){let x=cart.find(i=>i.id===id);if(x)x.qty++;else cart.push({id,qty:1});save();openCart();}
+function save(){localStorage.setItem("radhikacart",JSON.stringify(cart));updateBadge();renderCart();}
+function updateBadge(){document.getElementById("badge").textContent=cart.reduce((a,b)=>a+b.qty,0);}
+function changeQty(id,n){let x=cart.find(i=>i.id===id);if(!x)return;x.qty+=n;if(x.qty<=0)cart=cart.filter(i=>i.id!==id);save();}
+function renderCart(){
+ const box=document.getElementById("cartItems"),sum=document.getElementById("cartSummary");
+ if(!cart.length){box.innerHTML='<div class="empty">Your cart is empty.<br><br>Start shopping and add your favourites.</div>';sum.innerHTML="";return;}
+ let subtotal=cart.reduce((a,i)=>a+products.find(p=>p.id===i.id).price*i.qty,0),discount=subtotal>=1000?Math.round(subtotal*.2):0,total=subtotal-discount;
+ box.innerHTML=cart.map(i=>{let p=products.find(x=>x.id===i.id);return `<div class="cart-item"><img src="${p.img}"><div><b>${p.name}</b><div class="muted">₹${p.price}</div><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button>${i.qty}<button onclick="changeQty(${p.id},1)">+</button></div></div><b>₹${p.price*i.qty}</b></div>`}).join("");
+ sum.innerHTML=`<div class="row"><span>Subtotal</span><b>₹${subtotal.toLocaleString('en-IN')}</b></div><div class="row"><span>Discount</span><b>− ₹${discount.toLocaleString('en-IN')}</b></div><div class="row"><span>Shipping</span><b>${total>=999?"FREE":"₹79"}</b></div><div class="row total"><span>Total</span><b>₹${(total+(total>=999?0:79)).toLocaleString('en-IN')}</b></div><button class="btn full" onclick="openCheckout()">PROCEED TO CHECKOUT</button>`;
+}
+function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("overlay").classList.add("show");renderCart();}
+function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("overlay").classList.remove("show");}
+function openCheckout(){if(!cart.length){alert("Your cart is empty.");return}closeCart();renderOrder();document.getElementById("checkout").classList.add("show");}
+function closeCheckout(){document.getElementById("checkout").classList.remove("show");document.getElementById("success").classList.remove("show");document.getElementById("checkoutContent").style.display="block";}
+function renderOrder(){
+ let subtotal=cart.reduce((a,i)=>a+products.find(p=>p.id===i.id).price*i.qty,0),discount=subtotal>=1000?Math.round(subtotal*.2):0,ship=subtotal-discount>=999?0:79,total=subtotal-discount+ship;
+ document.getElementById("orderSummary").innerHTML=cart.map(i=>{let p=products.find(x=>x.id===i.id);return `<div class="row"><span>${p.name} × ${i.qty}</span><b>₹${p.price*i.qty}</b></div>`}).join("")+`<hr><div class="row"><span>Subtotal</span><b>₹${subtotal}</b></div><div class="row"><span>Discount</span><b>−₹${discount}</b></div><div class="row"><span>Shipping</span><b>${ship?"₹"+ship:"FREE"}</b></div><div class="row total"><span>Total</span><b>₹${total}</b></div>`;
+}
+function placeOrder(){
+ let required=["name","phone","address","city","pin"];if(required.some(id=>!document.getElementById(id).value.trim())){alert("Please fill all required delivery details.");return}
+ document.getElementById("checkoutContent").style.display="none";document.getElementById("success").classList.add("show");cart=[];save();
+}
+renderProducts();updateBadge();renderCart();
+</script>
+</body>
+</html>
